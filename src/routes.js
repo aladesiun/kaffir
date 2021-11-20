@@ -5,7 +5,6 @@ import home from './components/public/home'
 import login from './components/auth/login'
 import forget from './components/auth/forget'
 import register from './components/auth/register'
-import contact from './components/public/contact'
 import profile from './components/public/profile'
 import chat from './components/public/chat'
 import sendmsg from './components/public/sendmsg'
@@ -31,10 +30,6 @@ var routes = [
             {
                 path: '/report',
                 component: report
-            },
-            {
-                path: '/contact',
-                component: contact,
             },
          
             {

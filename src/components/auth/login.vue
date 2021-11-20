@@ -64,6 +64,7 @@ export default {
         login(){
             if(this.user.email.length == 0 || this.user.password.length == 0){
                 this.$store.commit('setNotification',{type:2, message: 'Email and Password fields are required'});
+                this.loading = false;
                 
                return false;
             }
@@ -84,6 +85,7 @@ export default {
                 }else{
                     var e_msg = data.data.message;
                     console.log(e_msg);
+                    this.loading = false;
                     this.$store.commit('setNotification',{type:2, message: e_msg})
                 }
                 this.loading = false;
